@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - Advertisement Effectiveness Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 30px;
+            background-color: var(--bg-primary);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .step {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .step:last-child {
+            border-bottom: none;
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .step h3 {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .step-content {
+            margin-left: 55px;
+        }
+        
+        code {
+            background-color: var(--bg-secondary);
+            padding: 2px 5px;
+            border-radius: var(--border-radius-sm);
+            font-family: monospace;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Use the Advertisement Effectiveness Analysis Project</h1>
+        <p>This guide will help you get started with both the Jupyter Notebook analysis and the web dashboard.</p>
+        
+        <div class="step">
+            <span class="step-number">1</span>
+            <h3>Jupyter Notebook Analysis</h3>
+            <div class="step-content">
+                <p>The Jupyter Notebook contains comprehensive data analysis and the prediction model:</p>
+                <ol>
+                    <li>Ensure you have Python and Jupyter installed</li>
+                    <li>Install required packages: <code>pip install pandas numpy matplotlib seaborn plotly scikit-learn xgboost</code></li>
+                    <li>Open the notebook: <code>jupyter notebook Advertisement_Effectiveness_Analysis.ipynb</code></li>
+                    <li>Run the cells sequentially to see the analysis unfold</li>
+                </ol>
+                <p>The notebook is organized into sections covering different aspects of advertisement effectiveness analysis.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">2</span>
+            <h3>Web Dashboard</h3>
+            <div class="step-content">
+                <p>The web dashboard provides an interactive visualization of the analysis:</p>
+                <ol>
+                    <li>Open <code>index.html</code> in a modern web browser</li>
+                    <li>Navigate through different sections using the top navigation menu</li>
+                    <li>Interact with charts by hovering over data points</li>
+                    <li>Try the prediction tool in the "Prediction" section</li>
+                    <li>Toggle between light and dark themes using the moon/sun icon</li>
+                </ol>
+                <p>The dashboard is fully responsive and works on desktop, tablet, and mobile devices.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">3</span>
+            <h3>Prediction Tool</h3>
+            <div class="step-content">
+                <p>The prediction tool allows you to estimate advertising success based on budget allocation:</p>
+                <ol>
+                    <li>Navigate to the "Prediction" section</li>
+                    <li>Enter your advertising budget for each channel</li>
+                    <li>Click "Predict Sales" to see the estimated results</li>
+                    <li>Review the predicted sales, total budget, and cost per unit</li>
+                </ol>
+                <p>This tool uses a machine learning model trained on the provided datasets to make predictions.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <span class="step-number">4</span>
+            <h3>Optimization Recommendations</h3>
+            <div class="step-content">
+                <p>The "Optimization" section provides data-driven recommendations:</p>
+                <ol>
+                    <li>Review the channel efficiency analysis</li>
+                    <li>Check the optimal budget allocation chart</li>
+                    <li>Read the key recommendations for improving advertising effectiveness</li>
+                    <li>Apply these insights to your advertising strategy</li>
+                </ol>
+                <p>These recommendations are based on comprehensive analysis of all four datasets.</p>
+            </div>
+        </div>
+        
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+    </div>
+</body>
+</html>

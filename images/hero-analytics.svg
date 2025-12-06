@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient">
+            <stop stop-color="#4361ee" offset="0%"></stop>
+            <stop stop-color="#7209b7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient2">
+            <stop stop-color="#4cc9f0" offset="0%"></stop>
+            <stop stop-color="#4361ee" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient3">
+            <stop stop-color="#7209b7" offset="0%"></stop>
+            <stop stop-color="#f72585" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect fill="#f8f9fa" x="0" y="0" width="800" height="600" rx="20"></rect>
+        
+        <!-- Dashboard Frame -->
+        <rect fill="white" x="50" y="50" width="700" height="500" rx="15" stroke="#e9ecef" stroke-width="2"></rect>
+        
+        <!-- Header -->
+        <rect fill="#f8f9fa" x="50" y="50" width="700" height="60" rx="15 15 0 0" stroke="#e9ecef" stroke-width="2"></rect>
+        <circle fill="#f44336" cx="90" cy="80" r="8"></circle>
+        <circle fill="#ff9800" cx="120" cy="80" r="8"></circle>
+        <circle fill="#4caf50" cx="150" cy="80" r="8"></circle>
+        <text font-family="Arial" font-size="18" font-weight="bold" fill="#212529" x="400" y="85" text-anchor="middle">Advertisement Analytics Dashboard</text>
+        
+        <!-- Sidebar -->
+        <rect fill="#f8f9fa" x="50" y="110" width="150" height="440" stroke="#e9ecef" stroke-width="2"></rect>
+        
+        <!-- Sidebar Menu Items -->
+        <rect fill="url(#linearGradient)" x="60" y="130" width="130" height="40" rx="5"></rect>
+        <text font-family="Arial" font-size="14" fill="white" x="125" y="155" text-anchor="middle">Overview</text>
+        
+        <rect fill="white" x="60" y="180" width="130" height="40" rx="5" stroke="#e9ecef" stroke-width="1"></rect>
+        <text font-family="Arial" font-size="14" fill="#212529" x="125" y="205" text-anchor="middle">ROI Analysis</text>
+        
+        <rect fill="white" x="60" y="230" width="130" height="40" rx="5" stroke="#e9ecef" stroke-width="1"></rect>
+        <text font-family="Arial" font-size="14" fill="#212529" x="125" y="255" text-anchor="middle">Engagement</text>
+        
+        <rect fill="white" x="60" y="280" width="130" height="40" rx="5" stroke="#e9ecef" stroke-width="1"></rect>
+        <text font-family="Arial" font-size="14" fill="#212529" x="125" y="305" text-anchor="middle">Demographics</text>
+        
+        <rect fill="white" x="60" y="330" width="130" height="40" rx="5" stroke="#e9ecef" stroke-width="1"></rect>
+        <text font-family="Arial" font-size="14" fill="#212529" x="125" y="355" text-anchor="middle">Channels</text>
+        
+        <rect fill="white" x="60" y="380" width="130" height="40" rx="5" stroke="#e9ecef" stroke-width="1"></rect>
+        <text font-family="Arial" font-size="14" fill="#212529" x="125" y="405" text-anchor="middle">Prediction</text>
+        
+        <!-- Main Content Area -->
+        <rect fill="white" x="200" y="110" width="550" height="440"></rect>
+        
+        <!-- KPI Cards -->
+        <rect fill="white" x="220" y="130" width="120" height="100" rx="10" stroke="#e9ecef" stroke-width="2"></rect>
+        <circle fill="url(#linearGradient)" cx="250" cy="160" r="15"></circle>
+        <text font-family="Arial" font-size="10" fill="#6c757d" x="280" y="160">ROI</text>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="#212529" x="280" y="190">5.42%</text>
+        <path d="M270,200 L280,190 L290,200" stroke="#4caf50" stroke-width="2" fill="none"></path>
+        <text font-family="Arial" font-size="10" fill="#4caf50" x="295" y="200">12.3%</text>
+        
+        <rect fill="white" x="350" y="130" width="120" height="100" rx="10" stroke="#e9ecef" stroke-width="2"></rect>
+        <circle fill="url(#linearGradient2)" cx="380" cy="160" r="15"></circle>
+        <text font-family="Arial" font-size="10" fill="#6c757d" x="410" y="160">Conversion</text>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="#212529" x="410" y="190">8.75%</text>
+        <path d="M400,200 L410,190 L420,200" stroke="#4caf50" stroke-width="2" fill="none"></path>
+        <text font-family="Arial" font-size="10" fill="#4caf50" x="425" y="200">3.2%</text>
+        
+        <rect fill="white" x="480" y="130" width="120" height="100" rx="10" stroke="#e9ecef" stroke-width="2"></rect>
+        <circle fill="url(#linearGradient3)" cx="510" cy="160" r="15"></circle>
+        <text font-family="Arial" font-size="10" fill="#6c757d" x="540" y="160">CTR</text>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="#212529" x="540" y="190">2.18%</text>
+        <path d="M530,190 L540,200 L550,190" stroke="#f44336" stroke-width="2" fill="none"></path>
+        <text font-family="Arial" font-size="10" fill="#f44336" x="555" y="200">0.5%</text>
+        
+        <rect fill="white" x="610" y="130" width="120" height="100" rx="10" stroke="#e9ecef" stroke-width="2"></rect>
+        <circle fill="url(#linearGradient)" cx="640" cy="160" r="15"></circle>
+        <text font-family="Arial" font-size="10" fill="#6c757d" x="670" y="160">Cost</text>
+        <text font-family="Arial" font-size="20" font-weight="bold" fill="#212529" x="670" y="190">$42.15</text>
+        <path d="M660,190 L670,200 L680,190" stroke="#4caf50" stroke-width="2" fill="none"></path>
+        <text font-family="Arial" font-size="10" fill="#4caf50" x="685" y="200">8.7%</text>
+        
+        <!-- Charts -->
+        <rect fill="white" x="220" y="250" width="250" height="280" rx="10" stroke="#e9ecef" stroke-width="2"></rect>
+        <text font-family="Arial" font-size="14" font-weight="bold" fill="#212529" x="345" y="280" text-anchor="middle">Performance Trends</text>
+        
+        <!-- Line Chart -->
+        <polyline points="240,450 240,320 490,320" stroke="#e9ecef" stroke-width="1" fill="none"></polyline>
+        <polyline points="240,450 270,420 300,430 330,400 360,380 390,390 420,370 450,350 480,340" stroke="url(#linearGradient)" stroke-width="3" fill="none"></polyline>
+        <polyline points="240,450 270,440 300,435 330,425 360,415 390,420 420,410 450,400 480,390" stroke="url(#linearGradient2)" stroke-width="3" fill="none"></polyline>
+        
+        <!-- X-Axis Labels -->
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="240" y="470">Jan</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="270" y="470">Feb</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="300" y="470">Mar</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="330" y="470">Apr</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="360" y="470">May</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="390" y="470">Jun</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="420" y="470">Jul</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="450" y="470">Aug</text>
+        <text font-family="Arial" font-size="8" fill="#6c757d" x="480" y="470">Sep</text>
+        
+        <!-- Pie Chart -->
+        <rect fill="white" x="480" y="250" width="250" height="280" rx="10" stroke="#e9ecef" stroke-width="2"></rect>
+        <text font-family="Arial" font-size="14" font-weight="bold" fill="#212529" x="605" y="280" text-anchor="middle">Channel Distribution</text>
+        
+        <path d="M605,380 L605,330 A50,50 0 0,1 648.3,355 z" fill="url(#linearGradient)"></path>
+        <path d="M605,380 L648.3,355 A50,50 0 0,1 635.3,417.1 z" fill="url(#linearGradient2)"></path>
+        <path d="M605,380 L635.3,417.1 A50,50 0 0,1 574.7,417.1 z" fill="url(#linearGradient3)"></path>
+        <path d="M605,380 L574.7,417.1 A50,50 0 0,1 561.7,355 z" fill="#4caf50"></path>
+        <path d="M605,380 L561.7,355 A50,50 0 0,1 605,330 z" fill="#ff9800"></path>
+        
+        <!-- Legend -->
+        <rect fill="url(#linearGradient)" x="520" y="450" width="10" height="10"></rect>
+        <text font-family="Arial" font-size="10" fill="#212529" x="535" y="460">Social Media (35%)</text>
+        
+        <rect fill="url(#linearGradient2)" x="520" y="470" width="10" height="10"></rect>
+        <text font-family="Arial" font-size="10" fill="#212529" x="535" y="480">Search Ads (25%)</text>
+        
+        <rect fill="url(#linearGradient3)" x="520" y="490" width="10" height="10"></rect>
+        <text font-family="Arial" font-size="10" fill="#212529" x="535" y="500">Display Ads (15%)</text>
+        
+        <rect fill="#4caf50" x="620" y="450" width="10" height="10"></rect>
+        <text font-family="Arial" font-size="10" fill="#212529" x="635" y="460">Email (10%)</text>
+        
+        <rect fill="#ff9800" x="620" y="470" width="10" height="10"></rect>
+        <text font-family="Arial" font-size="10" fill="#212529" x="635" y="480">Influencer (15%)</text>
+    </g>
+</svg>

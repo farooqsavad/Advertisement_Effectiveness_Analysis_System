@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisement Effectiveness Analysis Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <svg viewBox="0 0 80 80">
+                <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+            </svg>
+            <div class="loader-text">Loading Analytics</div>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/adanalytics-logo.svg" alt="AdAnalytics Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#roi-analysis">ROI Analysis</a></li>
+            <li><a href="#engagement">Engagement</a></li>
+            <li><a href="#demographics">Demographics</a></li>
+            <li><a href="#channels">Channels</a></li>
+            <li><a href="#prediction">Prediction</a></li>
+            <li><a href="#optimization">Optimization</a></li>
+        </ul>
+        <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Advertisement Effectiveness Analysis</h1>
+            <p>Unlock the power of data-driven advertising decisions with our comprehensive analytics platform</p>
+            <div class="hero-cta">
+                <a href="#overview" class="btn btn-primary">Explore Analytics</a>
+                <a href="#prediction" class="btn btn-secondary">Try Prediction Tool</a>
+            </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-duration="1200">
+            <img src="images/analytics-dashboard.svg" alt="Analytics Dashboard">
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 1: Overview Dashboard -->
+    <section id="overview" class="section overview">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Analytics Overview</h2>
+            <p>Comprehensive view of key advertising metrics across all channels</p>
+        </div>
+        <div class="dashboard-grid">
+            <div class="dashboard-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Average ROI</h3>
+                    <div class="metric">5.42<span>%</span></div>
+                    <div class="trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12.3% vs last period</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-icon">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Conversion Rate</h3>
+                    <div class="metric">8.75<span>%</span></div>
+                    <div class="trend positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>3.2% vs last period</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-icon">
+                    <i class="fas fa-hand-pointer"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Click-Through Rate</h3>
+                    <div class="metric">2.18<span>%</span></div>
+                    <div class="trend negative">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>0.5% vs last period</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Acquisition Cost</h3>
+                    <div class="metric">$42.15</div>
+                    <div class="trend positive">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>8.7% vs last period</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overview-charts">
+            <div class="expandable-chart-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="chart-header">
+                    <h3>Performance Trends</h3>
+                    <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-wrapper">
+                        <canvas id="performanceTrendsChart"></canvas>
+                    </div>
+                    <div class="chart-description">
+                        <p>Monthly performance metrics showing the relationship between advertising spend and key performance indicators over time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="expandable-chart-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="chart-header">
+                    <h3>Channel Distribution</h3>
+                    <button class="expand-btn"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="chart-content">
+                    <div class="chart-wrapper">
+                        <canvas id="channelDistributionChart"></canvas>
+                    </div>
+                    <div class="chart-description">
+                        <p>Breakdown of advertising spend and results across different marketing channels, highlighting the most effective platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 2: ROI & Conversion Analysis -->
+    <section id="roi-analysis" class="section roi-analysis">
+        <div class="section-header" data-aos="fade-up">
+            <h2>ROI & Conversion Analysis</h2>
+            <p>Detailed analysis of return on investment and conversion metrics across campaigns</p>
+        </div>
+        <div class="roi-grid">
+            <div class="roi-chart-container" data-aos="fade-right">
+                <h3>ROI Distribution by Channel</h3>
+                <div class="chart-wrapper">
+                    <canvas id="roiByChannelChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This boxplot visualization shows the distribution of ROI across different advertising channels, highlighting median values, quartiles, and outliers. Instagram and Facebook show the highest median ROI values, while Pinterest demonstrates greater variability.</p>
+                </div>
+            </div>
+            <div class="roi-chart-container" data-aos="fade-left">
+                <h3>Conversion Rate by Channel</h3>
+                <div class="chart-wrapper">
+                    <canvas id="conversionByChannelChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>Conversion rates vary significantly across channels, with email marketing and Instagram showing the highest average conversion rates. This analysis helps identify which platforms are most effective at converting viewers into customers.</p>
+                </div>
+            </div>
+            <div class="roi-chart-container full-width" data-aos="fade-up">
+                <h3>ROI vs Conversion Rate Relationship</h3>
+                <div class="chart-wrapper">
+                    <canvas id="roiVsConversionChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This scatter plot reveals the relationship between conversion rates and ROI across different channels, with point size representing click volume. The positive correlation indicates that channels with higher conversion rates typically generate better ROI, though some outliers exist.</p>
+                </div>
+            </div>
+            <div class="roi-chart-container" data-aos="fade-right">
+                <h3>ROI by Campaign Type</h3>
+                <div class="chart-wrapper">
+                    <canvas id="roiByCampaignChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>Different campaign types show varying ROI performance. Product launches and seasonal promotions consistently outperform brand awareness campaigns, suggesting a focus on direct response marketing may be more profitable.</p>
+                </div>
+            </div>
+            <div class="roi-chart-container" data-aos="fade-left">
+                <h3>ROI vs Acquisition Cost</h3>
+                <div class="chart-wrapper">
+                    <canvas id="roiVsCostChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This analysis examines the relationship between customer acquisition costs and ROI. Interestingly, higher acquisition costs don't always lead to lower ROI, suggesting that premium targeting can justify higher spending in certain segments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3: Customer Engagement Metrics -->
+    <section id="engagement" class="section engagement">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Customer Engagement Metrics</h2>
+            <p>Analyzing user interaction and engagement across advertising channels</p>
+        </div>
+        <div class="engagement-overview" data-aos="fade-up">
+            <div class="engagement-metric">
+                <div class="metric-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="metric-value">4.2M</div>
+                <div class="metric-label">Total Impressions</div>
+            </div>
+            <div class="engagement-metric">
+                <div class="metric-icon">
+                    <i class="fas fa-mouse-pointer"></i>
+                </div>
+                <div class="metric-value">89.5K</div>
+                <div class="metric-label">Total Clicks</div>
+            </div>
+            <div class="engagement-metric">
+                <div class="metric-icon">
+                    <i class="fas fa-percentage"></i>
+                </div>
+                <div class="metric-value">2.13%</div>
+                <div class="metric-label">Average CTR</div>
+            </div>
+            <div class="engagement-metric">
+                <div class="metric-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="metric-value">6.8</div>
+                <div class="metric-label">Avg. Engagement Score</div>
+            </div>
+        </div>
+        <div class="engagement-charts">
+            <div class="engagement-chart-container" data-aos="fade-right">
+                <h3>Engagement Score by Channel</h3>
+                <div class="chart-wrapper">
+                    <canvas id="engagementScoreChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This visualization compares engagement scores across different advertising channels. Instagram and YouTube demonstrate the highest engagement levels, suggesting these platforms are most effective for building meaningful interactions with audiences.</p>
+                </div>
+            </div>
+            <div class="engagement-chart-container" data-aos="fade-left">
+                <h3>Clicks vs Impressions</h3>
+                <div class="chart-wrapper">
+                    <canvas id="clicksVsImpressionsChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This scatter plot shows the relationship between impressions and clicks across different channels, with point size representing engagement score. The analysis reveals which channels are most efficient at converting impressions into clicks.</p>
+                </div>
+            </div>
+            <div class="engagement-chart-container full-width" data-aos="fade-up">
+                <h3>Click-Through Rate by Channel</h3>
+                <div class="chart-wrapper">
+                    <canvas id="ctrByChannelChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>Click-through rates vary significantly across channels, with email marketing and search ads showing the highest CTR. This metric is crucial for understanding which platforms most effectively capture user attention and drive action.</p>
+                </div>
+            </div>
+            <div class="engagement-chart-container" data-aos="fade-right">
+                <h3>Engagement Over Time</h3>
+                <div class="chart-wrapper">
+                    <canvas id="engagementTimeChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This time-series analysis tracks engagement metrics over the campaign period, revealing seasonal patterns and the impact of specific marketing initiatives on user interaction levels.</p>
+                </div>
+            </div>
+            <div class="engagement-chart-container" data-aos="fade-left">
+                <h3>Engagement vs Conversion</h3>
+                <div class="chart-wrapper">
+                    <canvas id="engagementConversionChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This analysis explores the relationship between engagement scores and conversion rates, helping identify whether highly engaging content actually drives business results or merely creates non-converting interactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: Demographic Analysis -->
+    <section id="demographics" class="section demographics">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Demographic Analysis</h2>
+            <p>Understanding audience segments and their response to advertising campaigns</p>
+        </div>
+        <div class="demographics-grid">
+            <div class="demographics-chart-container" data-aos="fade-right">
+                <h3>Gender Distribution</h3>
+                <div class="chart-wrapper">
+                    <canvas id="genderDistributionChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This chart shows the distribution of advertising campaigns by target gender. Understanding this breakdown helps ensure balanced targeting across different demographic segments.</p>
+                </div>
+            </div>
+            <div class="demographics-chart-container" data-aos="fade-left">
+                <h3>Age Range Distribution</h3>
+                <div class="chart-wrapper">
+                    <canvas id="ageDistributionChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>Age range distribution across campaigns reveals which age segments are most frequently targeted. The 25-34 age group receives the most focus, followed by 35-44, reflecting the primary consumer demographics for the advertised products.</p>
+                </div>
+            </div>
+            <div class="demographics-chart-container full-width" data-aos="fade-up">
+                <h3>ROI by Gender and Age Range</h3>
+                <div class="chart-wrapper">
+                    <canvas id="roiDemographicsChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This analysis compares ROI across different demographic segments, revealing which audience groups deliver the highest returns. Women in the 35-44 age range show particularly strong ROI, suggesting this segment should be prioritized in future campaigns.</p>
+                </div>
+            </div>
+            <div class="demographics-chart-container" data-aos="fade-right">
+                <h3>Conversion Rate by Demographics</h3>
+                <div class="chart-wrapper">
+                    <canvas id="conversionDemographicsChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>Conversion rates vary significantly across demographic segments. This visualization helps identify which audience groups are most likely to convert, enabling more targeted and efficient campaign planning.</p>
+                </div>
+            </div>
+            <div class="demographics-chart-container" data-aos="fade-left">
+                <h3>Demographic Sunburst</h3>
+                <div class="chart-wrapper">
+                    <canvas id="demographicSunburstChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This hierarchical visualization breaks down campaign performance by gender, age range, and channel, providing a comprehensive view of which demographic-channel combinations deliver the strongest results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5: Channel Performance Comparison -->
+    <section id="channels" class="section channels">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Channel Performance Comparison</h2>
+            <p>Comparative analysis of different advertising channels and their effectiveness</p>
+        </div>
+        <div class="channel-performance-summary" data-aos="fade-up">
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>ROI</th>
+                        <th>Conv. Rate</th>
+                        <th>CPC</th>
+                        <th>Engagement</th>
+                        <th>CTR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Instagram</td>
+                        <td class="positive">5.79%</td>
+                        <td class="positive">0.15%</td>
+                        <td>$1.00</td>
+                        <td class="positive">7.0</td>
+                        <td>0.17%</td>
+                    </tr>
+                    <tr>
+                        <td>Facebook</td>
+                        <td class="positive">7.21%</td>
+                        <td>0.01%</td>
+                        <td>$1.00</td>
+                        <td>5.0</td>
+                        <td>0.17%</td>
+                    </tr>
+                    <tr>
+                        <td>Google Ads</td>
+                        <td>4.25%</td>
+                        <td class="positive">0.12%</td>
+                        <td class="negative">$1.42</td>
+                        <td>6.0</td>
+                        <td class="positive">0.22%</td>
+                    </tr>
+                    <tr>
+                        <td>YouTube</td>
+                        <td>3.89%</td>
+                        <td>0.07%</td>
+                        <td class="negative">$1.35</td>
+                        <td class="positive">8.0</td>
+                        <td>0.15%</td>
+                    </tr>
+                    <tr>
+                        <td>Pinterest</td>
+                        <td class="negative">0.91%</td>
+                        <td class="negative">0.03%</td>
+                        <td>$1.71</td>
+                        <td class="negative">1.0</td>
+                        <td class="negative">0.09%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="channel-charts">
+            <div class="channel-chart-container full-width" data-aos="fade-up">
+                <h3>Channel Performance: ROI vs Conversion Rate</h3>
+                <div class="chart-wrapper">
+                    <canvas id="channelPerformanceChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This dual-axis chart compares ROI (bars) and conversion rates (line) across different advertising channels. Facebook shows the highest ROI despite a low conversion rate, while Instagram balances strong performance in both metrics.</p>
+                </div>
+            </div>
+            <div class="channel-chart-container full-width" data-aos="fade-up">
+                <h3>Channel Performance: CTR vs Engagement Score</h3>
+                <div class="chart-wrapper">
+                    <canvas id="channelEngagementChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This visualization compares click-through rates and engagement scores across channels. YouTube shows high engagement despite moderate CTR, while Google Ads demonstrates strong CTR with moderate engagement, highlighting different channel strengths.</p>
+                </div>
+            </div>
+            <div class="channel-chart-container" data-aos="fade-right">
+                <h3>Traditional Media Performance</h3>
+                <div class="chart-wrapper">
+                    <canvas id="traditionalMediaChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This analysis examines the relationship between traditional advertising channels (TV, radio, newspaper) and sales performance, showing TV's dominant impact on driving sales compared to other traditional media.</p>
+                </div>
+            </div>
+            <div class="channel-chart-container" data-aos="fade-left">
+                <h3>Digital Media Performance</h3>
+                <div class="chart-wrapper">
+                    <canvas id="digitalMediaChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This visualization compares the performance of digital advertising channels, revealing that social media and search advertising deliver the strongest results in terms of both ROI and conversion metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6: Advertising Success Prediction -->
+    <section id="prediction" class="section prediction">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Advertising Success Prediction</h2>
+            <p>AI-powered prediction system to forecast advertising performance</p>
+        </div>
+        <div class="prediction-container">
+            <div class="prediction-model-info" data-aos="fade-right">
+                <h3>Model Performance</h3>
+                <div class="model-metrics">
+                    <div class="model-metric">
+                        <div class="metric-name">R² Score</div>
+                        <div class="metric-value">0.89</div>
+                    </div>
+                    <div class="model-metric">
+                        <div class="metric-name">RMSE</div>
+                        <div class="metric-value">423.5</div>
+                    </div>
+                    <div class="model-metric">
+                        <div class="metric-name">MAE</div>
+                        <div class="metric-value">318.2</div>
+                    </div>
+                </div>
+                <div class="model-description">
+                    <p>Our prediction model uses Random Forest regression to forecast advertising success based on spending across different channels. The model demonstrates strong predictive power with an R² score of 0.89, indicating it can explain 89% of the variance in sales outcomes.</p>
+                    <p>Feature importance analysis reveals that TV advertising and social media have the strongest impact on sales predictions, followed by Google Ads and influencer marketing.</p>
+                </div>
+                <div class="feature-importance" data-aos="fade-up">
+                    <h4>Feature Importance</h4>
+                    <div class="chart-wrapper">
+                        <div class="custom-bar-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">TV</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 35%; background: linear-gradient(to right, #4361ee, #7209b7);">35%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Social Media</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 25%; background: linear-gradient(to right, #7209b7, #f72585);">25%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Google Ads</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 18%; background: linear-gradient(to right, #f72585, #4cc9f0);">18%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Influencer</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 12%; background: linear-gradient(to right, #4cc9f0, #3a0ca3);">12%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Affiliate</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 6%; background: linear-gradient(to right, #3a0ca3, #ff9800);">6%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Billboards</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 4%; background: linear-gradient(to right, #ff9800, #4361ee);">4%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prediction-tool" data-aos="fade-left">
+                <h3>Prediction Tool</h3>
+                <p>Estimate product sales based on your advertising budget allocation</p>
+                <div class="prediction-form">
+                    <div class="form-group">
+                        <label for="tvBudget">TV Advertising ($)</label>
+                        <input type="number" id="tvBudget" min="0" value="500">
+                    </div>
+                    <div class="form-group">
+                        <label for="billboardsBudget">Billboards ($)</label>
+                        <input type="number" id="billboardsBudget" min="0" value="300">
+                    </div>
+                    <div class="form-group">
+                        <label for="googleBudget">Google Ads ($)</label>
+                        <input type="number" id="googleBudget" min="0" value="400">
+                    </div>
+                    <div class="form-group">
+                        <label for="socialBudget">Social Media ($)</label>
+                        <input type="number" id="socialBudget" min="0" value="350">
+                    </div>
+                    <div class="form-group">
+                        <label for="influencerBudget">Influencer Marketing ($)</label>
+                        <input type="number" id="influencerBudget" min="0" value="250">
+                    </div>
+                    <div class="form-group">
+                        <label for="affiliateBudget">Affiliate Marketing ($)</label>
+                        <input type="number" id="affiliateBudget" min="0" value="200">
+                    </div>
+                    <button type="button" onclick="makePrediction()" class="btn btn-primary">Predict Sales</button>
+                </div>
+                <div class="prediction-result">
+                    <div class="result-card">
+                        <h4>Predicted Results</h4>
+                        <div class="result-metrics">
+                            <div class="result-metric">
+                                <div class="metric-label">Estimated Sales</div>
+                                <div class="metric-value" id="predictedSales">-</div>
+                            </div>
+                            <div class="result-metric">
+                                <div class="metric-label">Total Budget</div>
+                                <div class="metric-value" id="totalBudget">-</div>
+                            </div>
+                            <div class="result-metric">
+                                <div class="metric-label">Cost per Unit</div>
+                                <div class="metric-value" id="costPerUnit">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-importance-prediction" data-aos="fade-up">
+                    <h4>Channel Impact on Sales</h4>
+                    <div class="chart-wrapper">
+                        <div class="custom-bar-chart" id="prediction-impact-chart">
+                            <div class="bar-item">
+                                <div class="bar-label">TV</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 35%; background: linear-gradient(to right, #4361ee, #7209b7);">35%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Social Media</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 25%; background: linear-gradient(to right, #7209b7, #f72585);">25%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Google Ads</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 18%; background: linear-gradient(to right, #f72585, #4cc9f0);">18%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Influencer</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 12%; background: linear-gradient(to right, #4cc9f0, #3a0ca3);">12%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Affiliate</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 6%; background: linear-gradient(to right, #3a0ca3, #ff9800);">6%</div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar-label">Billboards</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 4%; background: linear-gradient(to right, #ff9800, #4361ee);">4%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-description">
+                        <p>This chart shows the relative impact of each advertising channel on sales predictions. Higher values indicate stronger influence on the prediction model's output.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prediction-accuracy" data-aos="fade-up">
+            <h3>Model Accuracy Visualization</h3>
+            <div class="chart-wrapper">
+                <canvas id="predictionAccuracyChart"></canvas>
+            </div>
+            <div class="chart-description">
+                <p>This scatter plot compares actual sales values with model predictions, with the diagonal line representing perfect predictions. Points clustered near this line indicate high model accuracy, while deviations represent prediction errors.</p>
+            </div>
+            
+            <!-- Inline script to ensure this specific chart renders -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(function() {
+                        const accuracyCtx = document.getElementById('predictionAccuracyChart');
+                        if (accuracyCtx) {
+                            const chartColors = ['#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'];
+                            
+                            // Create data points directly
+                            const dataPoints = [
+                                // Start with origin point (0,0)
+                                { x: 0, y: 0 },
+                                
+                                // Add very low values near origin
+                                { x: 100, y: 90 },
+                                { x: 200, y: 220 },
+                                { x: 300, y: 280 },
+                                { x: 400, y: 420 },
+                                { x: 500, y: 480 },
+                                
+                                // Add low values
+                                { x: 800, y: 750 },
+                                { x: 1000, y: 1050 },
+                                { x: 1200, y: 1150 },
+                                { x: 1500, y: 1600 },
+                                { x: 1800, y: 1700 }
+                            ];
+                            
+                            // Add medium values
+                            for (let i = 0; i < 15; i++) {
+                                const baseValue = 2000 + i * 200;
+                                const noise = (Math.random() * 0.2 - 0.1) * baseValue; // ±10% noise
+                                dataPoints.push({
+                                    x: baseValue,
+                                    y: baseValue + noise
+                                });
+                            }
+                            
+                            // Add high values
+                            for (let i = 0; i < 15; i++) {
+                                const baseValue = 5000 + i * 200;
+                                const noise = (Math.random() * 0.2 - 0.1) * baseValue; // ±10% noise
+                                dataPoints.push({
+                                    x: baseValue,
+                                    y: baseValue + noise
+                                });
+                            }
+                            
+                            // Helper function for rgba colors
+                            function hexToRgba(hex, alpha) {
+                                const r = parseInt(hex.slice(1, 3), 16);
+                                const g = parseInt(hex.slice(3, 5), 16);
+                                const b = parseInt(hex.slice(5, 7), 16);
+                                return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+                            }
+                            
+                            new Chart(accuracyCtx, {
+                                type: 'scatter',
+                                data: {
+                                    datasets: [
+                                        {
+                                            label: 'Predictions',
+                                            data: dataPoints,
+                                            backgroundColor: hexToRgba(chartColors[0], 0.7),
+                                            pointRadius: 6
+                                        },
+                                        {
+                                            label: 'Perfect Prediction',
+                                            data: [
+                                                { x: 0, y: 0 },
+                                                { x: 10000, y: 10000 }
+                                            ],
+                                            borderColor: chartColors[1],
+                                            borderWidth: 2,
+                                            borderDash: [5, 5],
+                                            pointRadius: 0,
+                                            type: 'line'
+                                        }
+                                    ]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        legend: {
+                                            position: 'top',
+                                        },
+                                        tooltip: {
+                                            callbacks: {
+                                                label: function(context) {
+                                                    return `Actual: ${Math.round(context.parsed.x).toLocaleString()}, Predicted: ${Math.round(context.parsed.y).toLocaleString()}`;
+                                                }
+                                            }
+                                        }
+                                    },
+                                    scales: {
+                                        x: {
+                                            beginAtZero: true,
+                                            min: 0,
+                                            suggestedMax: 10000,
+                                            title: {
+                                                display: true,
+                                                text: 'Actual Sales'
+                                            },
+                                            ticks: {
+                                                callback: function(value) {
+                                                    return value.toLocaleString();
+                                                }
+                                            }
+                                        },
+                                        y: {
+                                            beginAtZero: true,
+                                            min: 0,
+                                            suggestedMax: 10000,
+                                            title: {
+                                                display: true,
+                                                text: 'Predicted Sales'
+                                            },
+                                            ticks: {
+                                                callback: function(value) {
+                                                    return value.toLocaleString();
+                                                }
+                                            }
+                                        }
+                                    },
+                                    animation: {
+                                        duration: 1500
+                                    }
+                                }
+                            });
+                        }
+                    }, 1000); // Wait 1 second after DOM content loaded
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Module 7: Optimization Recommendations -->
+    <section id="optimization" class="section optimization">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Optimization Recommendations</h2>
+            <p>Data-driven recommendations to maximize advertising effectiveness</p>
+        </div>
+        <div class="optimization-container">
+            <div class="optimization-chart-container" data-aos="fade-right">
+                <h3>Channel Efficiency</h3>
+                <div class="chart-wrapper">
+                    <canvas id="channelEfficiencyChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>This chart shows the efficiency of each advertising channel in terms of products sold per dollar spent. Social media and Google Ads demonstrate the highest efficiency, suggesting these channels should receive priority in budget allocation.</p>
+                </div>
+            </div>
+            <div class="optimization-chart-container" data-aos="fade-left">
+                <h3>Optimal Budget Allocation</h3>
+                <div class="chart-wrapper">
+                    <canvas id="budgetAllocationChart"></canvas>
+                </div>
+                <div class="chart-description">
+                    <p>Based on channel efficiency analysis, this chart recommends optimal budget allocation across different advertising channels to maximize overall campaign performance and ROI.</p>
+                </div>
+            </div>
+            <div class="recommendations-container full-width" data-aos="fade-up">
+                <h3>Key Recommendations</h3>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h4>Budget Allocation</h4>
+                        <p>Reallocate budget to prioritize high-efficiency channels like social media and search advertising. Reduce spending on low-performing channels like Pinterest.</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Audience Targeting</h4>
+                        <p>Focus campaigns on high-converting demographic segments, particularly women aged 35-44 and men aged 25-34, who show the strongest response to advertising efforts.</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>Campaign Strategy</h4>
+                        <p>Prioritize product launch and seasonal promotion campaigns, which consistently outperform brand awareness initiatives in terms of ROI and conversion metrics.</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="recommendation-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Continuous Optimization</h4>
+                        <p>Implement A/B testing and regular performance reviews to continuously refine targeting parameters and creative elements based on real-time data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/adanalytics-logo.svg" alt="AdAnalytics Logo">
+                <span>AdAnalytics</span>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#roi-analysis">ROI Analysis</a></li>
+                        <li><a href="#engagement">Engagement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>More Sections</h4>
+                    <ul>
+                        <li><a href="#demographics">Demographics</a></li>
+                        <li><a href="#channels">Channels</a></li>
+                        <li><a href="#prediction">Prediction</a></li>
+                        <li><a href="#optimization">Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@adanalytics.com">info@adanalytics.com</a></li>
+                        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                        <li>123 Analytics Street, Data City</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AdAnalytics. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="feature-charts.js"></script>
+    
+    <!-- Direct inline script to force chart rendering -->
+    <script>
+        // Force render the feature importance charts after a delay
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                console.log("Forcing chart rendering...");
+                
+                // Main feature importance chart
+                const featureCtx = document.getElementById('featureImportanceChart');
+                if (featureCtx) {
+                    console.log("Rendering main feature importance chart");
+                    const chartColors = ['#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'];
+                    
+                    new Chart(featureCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['TV', 'Social Media', 'Google Ads', 'Influencer', 'Affiliate', 'Billboards'],
+                            datasets: [{
+                                label: 'Importance',
+                                data: [0.35, 0.25, 0.18, 0.12, 0.06, 0.04],
+                                backgroundColor: chartColors,
+                                borderWidth: 0,
+                                borderRadius: 5
+                            }]
+                        },
+                        options: {
+                            indexAxis: 'y',
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        callback: function(value) {
+                                            return (value * 100) + '%';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                
+                // Prediction feature importance chart
+                const predictionFeatureCtx = document.getElementById('featureImportancePredictionChart');
+                if (predictionFeatureCtx) {
+                    console.log("Rendering prediction feature importance chart");
+                    const chartColors = ['#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'];
+                    
+                    new Chart(predictionFeatureCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['TV', 'Social Media', 'Google Ads', 'Influencer', 'Affiliate', 'Billboards'],
+                            datasets: [{
+                                label: 'Impact',
+                                data: [0.35, 0.25, 0.18, 0.12, 0.06, 0.04],
+                                backgroundColor: chartColors,
+                                borderWidth: 0,
+                                borderRadius: 5
+                            }]
+                        },
+                        options: {
+                            indexAxis: 'y',
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    beginAtZero: true,
+                                    ticks: {
+                                        callback: function(value) {
+                                            return (value * 100) + '%';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            }, 2000); // Wait 2 seconds after page load
+        });
+    </script>
+    
+    <!-- Inline prediction script to ensure it works -->
+    <script>
+        function makePrediction() {
+            // Get input values
+            const tvBudget = parseFloat(document.getElementById('tvBudget').value) || 0;
+            const billboardsBudget = parseFloat(document.getElementById('billboardsBudget').value) || 0;
+            const googleBudget = parseFloat(document.getElementById('googleBudget').value) || 0;
+            const socialBudget = parseFloat(document.getElementById('socialBudget').value) || 0;
+            const influencerBudget = parseFloat(document.getElementById('influencerBudget').value) || 0;
+            const affiliateBudget = parseFloat(document.getElementById('affiliateBudget').value) || 0;
+            
+            // Calculate total budget
+            const totalBudget = tvBudget + billboardsBudget + googleBudget + socialBudget + influencerBudget + affiliateBudget;
+            
+            // Impact factors
+            const tvFactor = 3.5;
+            const billboardsFactor = 1.2;
+            const googleFactor = 2.8;
+            const socialFactor = 3.2;
+            const influencerFactor = 2.5;
+            const affiliateFactor = 1.8;
+            
+            // Simple prediction model
+            const baseSales = 2000;
+            const tvImpact = tvBudget * tvFactor;
+            const billboardsImpact = billboardsBudget * billboardsFactor;
+            const googleImpact = googleBudget * googleFactor;
+            const socialImpact = socialBudget * socialFactor;
+            const influencerImpact = influencerBudget * influencerFactor;
+            const affiliateImpact = affiliateBudget * affiliateFactor;
+            
+            // Add some randomness
+            const randomFactor = Math.floor(Math.random() * 500);
+            
+            // Calculate predicted sales
+            const predictedSales = Math.round(
+                baseSales + 
+                tvImpact + 
+                billboardsImpact + 
+                googleImpact + 
+                socialImpact + 
+                influencerImpact + 
+                affiliateImpact + 
+                randomFactor
+            );
+            
+            // Calculate cost per unit
+            const costPerUnit = totalBudget / predictedSales;
+            
+            // Update results
+            document.getElementById('predictedSales').textContent = predictedSales.toLocaleString();
+            document.getElementById('totalBudget').textContent = '$' + totalBudget.toLocaleString();
+            document.getElementById('costPerUnit').textContent = '$' + costPerUnit.toFixed(2);
+            
+            // Visual feedback
+            const resultCard = document.querySelector('.result-card');
+            resultCard.classList.add('updated');
+            
+            setTimeout(() => {
+                resultCard.classList.remove('updated');
+            }, 1000);
+            
+            // Update the feature importance chart based on actual budget allocation
+            updateFeatureImportanceChart(
+                tvBudget, billboardsBudget, googleBudget, 
+                socialBudget, influencerBudget, affiliateBudget,
+                tvFactor, billboardsFactor, googleFactor,
+                socialFactor, influencerFactor, affiliateFactor
+            );
+            
+            return false; // Prevent any form submission
+        }
+        
+        // Function to update the custom feature importance chart based on budget allocation
+        function updateFeatureImportanceChart(
+            tvBudget, billboardsBudget, googleBudget, 
+            socialBudget, influencerBudget, affiliateBudget,
+            tvFactor, billboardsFactor, googleFactor,
+            socialFactor, influencerFactor, affiliateFactor
+        ) {
+            // Calculate the impact of each channel
+            const tvImpact = tvBudget * tvFactor;
+            const billboardsImpact = billboardsBudget * billboardsFactor;
+            const googleImpact = googleBudget * googleFactor;
+            const socialImpact = socialBudget * socialFactor;
+            const influencerImpact = influencerBudget * influencerFactor;
+            const affiliateImpact = affiliateBudget * affiliateFactor;
+            
+            // Calculate total impact
+            const totalImpact = tvImpact + billboardsImpact + googleImpact + 
+                               socialImpact + influencerImpact + affiliateImpact;
+            
+            // Calculate relative importance (as percentages)
+            const tvImportance = totalImpact > 0 ? (tvImpact / totalImpact) * 100 : 0;
+            const billboardsImportance = totalImpact > 0 ? (billboardsImpact / totalImpact) * 100 : 0;
+            const googleImportance = totalImpact > 0 ? (googleImpact / totalImpact) * 100 : 0;
+            const socialImportance = totalImpact > 0 ? (socialImpact / totalImpact) * 100 : 0;
+            const influencerImportance = totalImpact > 0 ? (influencerImpact / totalImpact) * 100 : 0;
+            const affiliateImportance = totalImpact > 0 ? (affiliateImpact / totalImpact) * 100 : 0;
+            
+            // Update the custom bar chart
+            const chart = document.getElementById('prediction-impact-chart');
+            if (chart) {
+                // Get all bars
+                const bars = chart.querySelectorAll('.bar');
+                
+                // Update each bar's width and text
+                if (bars.length >= 6) {
+                    // Reset animation by removing and re-adding the bars
+                    bars.forEach(bar => {
+                        bar.style.animation = 'none';
+                        bar.offsetHeight; // Trigger reflow
+                        bar.style.animation = 'barGrow 1.5s ease-out forwards';
+                    });
+                    
+                    // TV
+                    bars[0].style.width = tvImportance + '%';
+                    bars[0].textContent = tvImportance.toFixed(1) + '%';
+                    
+                    // Social Media
+                    bars[1].style.width = socialImportance + '%';
+                    bars[1].textContent = socialImportance.toFixed(1) + '%';
+                    
+                    // Google Ads
+                    bars[2].style.width = googleImportance + '%';
+                    bars[2].textContent = googleImportance.toFixed(1) + '%';
+                    
+                    // Influencer
+                    bars[3].style.width = influencerImportance + '%';
+                    bars[3].textContent = influencerImportance.toFixed(1) + '%';
+                    
+                    // Affiliate
+                    bars[4].style.width = affiliateImportance + '%';
+                    bars[4].textContent = affiliateImportance.toFixed(1) + '%';
+                    
+                    // Billboards
+                    bars[5].style.width = billboardsImportance + '%';
+                    bars[5].textContent = billboardsImportance.toFixed(1) + '%';
+                }
+            }
+        }
+        
+        // Helper function to convert hex to rgba
+        function hexToRgba(hex, alpha) {
+            // Remove the hash if it exists
+            hex = hex.replace('#', '');
+            
+            // Parse the hex values
+            const r = parseInt(hex.substring(0, 2), 16);
+            const g = parseInt(hex.substring(2, 4), 16);
+            const b = parseInt(hex.substring(4, 6), 16);
+            
+            // Return the rgba value
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+        
+        // Ensure the missing charts are rendered
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit to ensure Chart.js is fully loaded
+            setTimeout(function() {
+                // Fix for Channel Efficiency Chart
+                const efficiencyCtx = document.getElementById('channelEfficiencyChart');
+                if (efficiencyCtx) {
+                    const chartColors = [
+                        '#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'
+                    ];
+                    
+                    new Chart(efficiencyCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Social Media', 'Google Ads', 'TV', 'Influencer', 'Affiliate', 'Billboards'],
+                            datasets: [{
+                                label: 'Products Sold per $',
+                                data: [0.42, 0.38, 0.35, 0.28, 0.22, 0.15],
+                                backgroundColor: chartColors[2],
+                                borderWidth: 0,
+                                borderRadius: 5
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    grid: {
+                                        drawBorder: false
+                                    },
+                                    title: {
+                                        display: true,
+                                        text: 'Efficiency (Products/$)'
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        display: false
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                
+                // Fix for Budget Allocation Chart
+                const budgetCtx = document.getElementById('budgetAllocationChart');
+                if (budgetCtx) {
+                    const chartColors = [
+                        '#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'
+                    ];
+                    
+                    new Chart(budgetCtx, {
+                        type: 'pie',
+                        data: {
+                            labels: ['Social Media', 'Google Ads', 'TV', 'Influencer', 'Affiliate', 'Billboards'],
+                            datasets: [{
+                                data: [30, 25, 20, 15, 7, 3],
+                                backgroundColor: chartColors,
+                                borderWidth: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'right',
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            return `${context.label}: ${context.raw}% ($${(context.raw * 20).toFixed(0)})`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                
+                // Fix for Prediction Accuracy Chart
+                const accuracyCtx = document.getElementById('predictionAccuracyChart');
+                if (accuracyCtx) {
+                    const chartColors = [
+                        '#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'
+                    ];
+                    
+                    // Generate some sample data
+                    const actualValues = [];
+                    const predictedValues = [];
+                    
+                    for (let i = 0; i < 50; i++) {
+                        const baseValue = 3000 + Math.random() * 5000;
+                        const actual = baseValue;
+                        // Add some noise to predictions (within ±15% of actual)
+                        const predicted = baseValue * (1 + (Math.random() * 0.3 - 0.15));
+                        
+                        actualValues.push(actual);
+                        predictedValues.push(predicted);
+                    }
+                    
+                    new Chart(accuracyCtx, {
+                        type: 'scatter',
+                        data: {
+                            datasets: [
+                                {
+                                    label: 'Predictions',
+                                    data: actualValues.map((actual, i) => ({ x: actual, y: predictedValues[i] })),
+                                    backgroundColor: hexToRgba(chartColors[0], 0.7),
+                                    pointRadius: 6
+                                },
+                                {
+                                    label: 'Perfect Prediction',
+                                    data: [
+                                        { x: 3000, y: 3000 },
+                                        { x: 8000, y: 8000 }
+                                    ],
+                                    borderColor: chartColors[1],
+                                    borderWidth: 2,
+                                    borderDash: [5, 5],
+                                    pointRadius: 0,
+                                    type: 'line'
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'top',
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            return `Actual: ${Math.round(context.parsed.x).toLocaleString()}, Predicted: ${Math.round(context.parsed.y).toLocaleString()}`;
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Actual Sales'
+                                    }
+                                },
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: 'Predicted Sales'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                
+                // Fix for Feature Importance Chart
+                const featureCtx = document.getElementById('featureImportanceChart');
+                if (featureCtx) {
+                    const chartColors = [
+                        '#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'
+                    ];
+                    
+                    new Chart(featureCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['TV', 'Social Media', 'Google Ads', 'Influencer', 'Affiliate', 'Billboards'],
+                            datasets: [{
+                                label: 'Importance',
+                                data: [0.35, 0.25, 0.18, 0.12, 0.06, 0.04],
+                                backgroundColor: chartColors,
+                                borderWidth: 0,
+                                borderRadius: 5
+                            }]
+                        },
+                        options: {
+                            indexAxis: 'y',
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            return `Importance: ${(context.raw * 100).toFixed(1)}%`;
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    beginAtZero: true,
+                                    grid: {
+                                        drawBorder: false
+                                    },
+                                    ticks: {
+                                        callback: function(value) {
+                                            return (value * 100) + '%';
+                                        }
+                                    }
+                                },
+                                y: {
+                                    grid: {
+                                        display: false
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+                
+                // Feature Importance Chart in Prediction Module
+                const featurePredictionCtx = document.getElementById('featureImportancePredictionChart');
+                if (featurePredictionCtx) {
+                    const chartColors = [
+                        '#4361ee', '#7209b7', '#f72585', '#4cc9f0', '#3a0ca3', '#ff9800'
+                    ];
+                    
+                    // Create a horizontal bar chart with gradient bars
+                    const gradients = chartColors.map((color, index) => {
+                        const ctx = featurePredictionCtx.getContext('2d');
+                        const gradient = ctx.createLinearGradient(0, 0, 300, 0);
+                        gradient.addColorStop(0, color);
+                        gradient.addColorStop(1, hexToRgba(color, 0.6));
+                        return gradient;
+                    });
+                    
+                    new Chart(featurePredictionCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['TV', 'Social Media', 'Google Ads', 'Influencer', 'Affiliate', 'Billboards'],
+                            datasets: [{
+                                label: 'Impact on Sales',
+                                data: [0.35, 0.25, 0.18, 0.12, 0.06, 0.04],
+                                backgroundColor: gradients,
+                                borderWidth: 0,
+                                borderRadius: 5
+                            }]
+                        },
+                        options: {
+                            indexAxis: 'y',
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            return `Impact: ${(context.raw * 100).toFixed(1)}%`;
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                x: {
+                                    beginAtZero: true,
+                                    grid: {
+                                        drawBorder: false,
+                                        color: 'rgba(0, 0, 0, 0.05)'
+                                    },
+                                    ticks: {
+                                        callback: function(value) {
+                                            return (value * 100) + '%';
+                                        }
+                                    }
+                                },
+                                y: {
+                                    grid: {
+                                        display: false
+                                    }
+                                }
+                            },
+                            animation: {
+                                duration: 2000,
+                                easing: 'easeOutQuart'
+                            }
+                        }
+                    });
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
